@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Riverside Chapel (formerly Aberdyfi English Chapel) · Aberdyfi</title>
+  <meta name="description" content="Riverside Chapel, Aberdyfi (formerly the Aberdyfi English Chapel / Aberdyfi Presbyterian Church). English-language Sunday services at 11am. All are welcome.">
+
+  <!-- Open Graph for link previews -->
+  <meta property="og:title" content="Riverside Chapel (formerly Aberdyfi English Chapel), Aberdyfi">
+  <meta property="og:description" content="English-language Sunday services at 11am. All are welcome.">
+  <meta property="og:image" content="chapel.jpg">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --honey: #D4A93C;
+      --honey-deep: #B08820;
+      --honey-soft: #F5E9C8;
+      --cream: #FAF4E1;
+      --ink: #2A1F0E;
+      --ink-soft: #5B4A2C;
+      --paper: #FEFDFA;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    html { -webkit-text-size-adjust: 100%; }
+
+    body {
+      margin: 0;
+      font-family: 'Lora', Georgia, 'Times New Roman', serif;
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--ink);
+      background: var(--cream);
+      background-image:
+        radial-gradient(at 15% 10%, rgba(212, 169, 60, 0.08) 0px, transparent 50%),
+        radial-gradient(at 85% 90%, rgba(212, 169, 60, 0.06) 0px, transparent 50%);
+      min-height: 100vh;
+    }
+
+    a {
+      color: var(--honey-deep);
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+      transition: color 0.2s ease;
+    }
+    a:hover { color: var(--ink); }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* HERO */
+    .hero {
+      padding: 4rem 0 2.5rem;
+      text-align: center;
+    }
+
+    .hero__eyebrow {
+      font-family: 'Fraunces', Georgia, serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 1rem;
+      letter-spacing: 0.08em;
+      color: var(--honey-deep);
+      text-transform: uppercase;
+      margin: 0 0 1rem;
+    }
+
+    .hero__title {
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 600;
+      font-size: clamp(2.75rem, 8vw, 4.5rem);
+      line-height: 1.05;
+      margin: 0;
+      letter-spacing: -0.02em;
+      font-variation-settings: "opsz" 144;
+    }
+
+    .hero__location {
+      font-family: 'Fraunces', Georgia, serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 1.25rem;
+      color: var(--ink-soft);
+      margin: 0.75rem 0 0;
+    }
+
+    .ornament {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin: 2rem auto;
+      max-width: 200px;
+      color: var(--honey);
+    }
+    .ornament::before,
+    .ornament::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: currentColor;
+      opacity: 0.5;
+    }
+    .ornament__dot {
+      width: 8px;
+      height: 8px;
+      background: currentColor;
+      border-radius: 50%;
+      transform: rotate(45deg);
+    }
+
+    /* PHOTO */
+    .photo-frame {
+      margin: 0 0 3rem;
+      padding: 0.5rem;
+      background: var(--paper);
+      border: 1px solid rgba(91, 74, 44, 0.15);
+      box-shadow: 0 20px 50px -25px rgba(42, 31, 14, 0.4);
+    }
+    .photo-frame img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      background: var(--honey-soft);
+    }
+
+    /* WELCOME */
+    .welcome {
+      padding: 1rem 0 3rem;
+      text-align: center;
+      max-width: 580px;
+      margin: 0 auto;
+    }
+    .welcome p {
+      font-size: 1.25rem;
+      line-height: 1.65;
+      margin: 0 0 1rem;
+    }
+    .welcome p:last-child { margin-bottom: 0; }
+    .welcome strong {
+      font-weight: 500;
+      color: var(--honey-deep);
+    }
+
+    /* DETAILS GRID */
+    .details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 0 0 3rem;
+    }
+    .detail-card {
+      background: var(--paper);
+      border: 1px solid rgba(91, 74, 44, 0.12);
+      padding: 1.5rem;
+      text-align: center;
+    }
+    .detail-card__label {
+      font-family: 'Fraunces', Georgia, serif;
+      font-style: italic;
+      font-size: 0.85rem;
+      color: var(--ink-soft);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin: 0 0 0.5rem;
+    }
+    .detail-card__value {
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 500;
+      font-size: 1.4rem;
+      margin: 0;
+      color: var(--ink);
+    }
+    .detail-card a {
+      text-decoration: none;
+      color: var(--ink);
+      border-bottom: 1px solid var(--honey);
+    }
+    .detail-card a:hover { color: var(--honey-deep); }
+
+    @media (max-width: 480px) {
+      .details { grid-template-columns: 1fr; }
+    }
+
+    /* YOUTUBE CTA */
+    .youtube-cta {
+      display: block;
+      background: var(--ink);
+      color: var(--cream);
+      padding: 2.5rem 2rem;
+      margin: 3rem 0;
+      text-align: center;
+      text-decoration: none;
+      border: 2px solid var(--ink);
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .youtube-cta::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, transparent 0%, rgba(212, 169, 60, 0.15) 100%);
+      pointer-events: none;
+    }
+    .youtube-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 20px 40px -15px rgba(42, 31, 14, 0.5);
+      color: var(--cream);
+    }
+    .youtube-cta__icon {
+      width: 56px;
+      height: 56px;
+      margin: 0 auto 1rem;
+      fill: var(--honey);
+    }
+    .youtube-cta__title {
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 500;
+      font-size: clamp(1.5rem, 4vw, 1.9rem);
+      margin: 0 0 0.4rem;
+      letter-spacing: -0.01em;
+    }
+    .youtube-cta__sub {
+      font-family: 'Fraunces', Georgia, serif;
+      font-style: italic;
+      font-size: 1rem;
+      color: var(--honey);
+      margin: 0;
+    }
+
+    /* PARKING */
+    .parking {
+      padding: 1rem 0 3rem;
+      text-align: center;
+    }
+    .parking h2 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 1.5rem;
+      color: var(--ink);
+      margin: 0 0 0.75rem;
+    }
+    .parking p {
+      font-size: 1.05rem;
+      margin: 0;
+      color: var(--ink-soft);
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid rgba(91, 74, 44, 0.15);
+      padding: 2rem 0 3rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--ink-soft);
+      line-height: 1.6;
+    }
+    footer p { margin: 0.25rem 0; }
+    footer a { color: var(--ink-soft); }
+    footer a:hover { color: var(--honey-deep); }
+
+    /* Subtle page entrance */
+    @media (prefers-reduced-motion: no-preference) {
+      .hero, .photo-frame, .welcome, .details, .youtube-cta, .parking {
+        animation: fade-up 0.7s ease backwards;
+      }
+      .photo-frame { animation-delay: 0.1s; }
+      .welcome { animation-delay: 0.2s; }
+      .details { animation-delay: 0.3s; }
+      .youtube-cta { animation-delay: 0.4s; }
+      .parking { animation-delay: 0.5s; }
+      @keyframes fade-up {
+        from { opacity: 0; transform: translateY(12px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <header class="hero">
+      <p class="hero__eyebrow">Welcome to</p>
+      <h1 class="hero__title">Riverside Chapel</h1>
+      <p class="hero__location">Aberdyfi</p>
+      <div class="ornament" aria-hidden="true">
+        <span class="ornament__dot"></span>
+      </div>
+    </header>
+
+    <figure class="photo-frame">
+      <!--
+        Replace chapel.jpg with your downloaded photo.
+        Recommended size: at least 1200px wide, 4:3 ratio looks best.
+      -->
+      <img src="chapel.jpg" alt="Riverside Chapel, Aberdyfi - a Welsh stone chapel building">
+    </figure>
+
+    <section class="welcome">
+      <p>We look forward to welcoming you every <strong>Sunday at 11am</strong>.</p>
+      <p>All are welcome, whether you live in Aberdyfi or are visiting.</p>
+    </section>
+
+    <div class="details">
+      <div class="detail-card">
+        <p class="detail-card__label">Telephone</p>
+        <p class="detail-card__value">
+          <a href="tel:+441654767336">01654 767336</a>
+        </p>
+      </div>
+      <div class="detail-card">
+        <p class="detail-card__label">Find Us</p>
+        <p class="detail-card__value">
+          <a href="https://www.google.com/maps/search/?api=1&query=Aberdyfi+Presbyterian+Church" target="_blank" rel="noopener">Map &amp; directions</a>
+        </p>
+      </div>
+    </div>
+
+    <a class="youtube-cta" href="https://www.youtube.com/@aberdyfienglishchapel1459" target="_blank" rel="noopener">
+      <svg class="youtube-cta__icon" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+      </svg>
+      <p class="youtube-cta__title">Watch our recent services</p>
+      <p class="youtube-cta__sub">on YouTube</p>
+    </a>
+
+    <section class="parking">
+      <h2>Parking</h2>
+      <p>Nearest parking is at the <a href="https://www.google.com/maps/search/?api=1&query=Aberdyfi+Seafront+Car+Park" target="_blank" rel="noopener">Aberdyfi seafront car park</a>, a short walk from the chapel.</p>
+    </section>
+
+    <footer>
+      <p>Riverside Chapel, formerly known as the <strong>Aberdyfi English Chapel</strong> (Aberdyfi Presbyterian Church).</p>
+      <p>Part of the <a href="https://www.ebcpcw.cymru/" target="_blank" rel="noopener">Presbyterian Church of Wales</a>.</p>
+      <p>Photo: <a href="https://www.geograph.org.uk/photo/6973608" target="_blank" rel="noopener">The English Chapel</a> by Richard Hoare, used under <a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank" rel="noopener">CC&nbsp;BY-SA&nbsp;2.0</a>.</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>
